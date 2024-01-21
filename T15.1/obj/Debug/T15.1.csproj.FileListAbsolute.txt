@@ -1,0 +1,2 @@
+D:\ОАиП\T15.1\obj\Debug\T15.1.csproj.AssemblyReference.cache
+D:\ОАиП\T15.1\obj\Debug\T15.1.csproj.CoreCompileInputs.cache
