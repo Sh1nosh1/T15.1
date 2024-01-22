@@ -13,6 +13,8 @@ namespace T15._1
         {
             try
             {
+                //Task 1.
+                
                 Write("Enter the number of students: ");
                 int num1 = Convert.ToInt32(ReadLine());
                 Students[] students = new Students[num1];
@@ -27,9 +29,28 @@ namespace T15._1
                     Write("Enter year of birth: ");
                     int year = Convert.ToInt32(ReadLine());
                     students[i] = new Students(name, surname, gender, year);
+                    WriteLine();
                 }
-                Students.Output();
+                WriteLine($"Number of boys: {Students.c_male}\nNumber of girls: {Students.c_female}\nTotal number: {Students.count}\n");
+                WriteLine("Boys: \n");
+                foreach (var student in students)
+                {
+                    if (student.Gender == "Male")
+                    {
+                        student.Output();
+                    }
+                }
+                WriteLine("Girls: \n");
+                foreach (var student in students)
+                {                    
+                    if (student.Gender == "Female")
+                    {
+                        student.Output();
+                    }
+                }
 
+                //Task 2.
+                
                 Write("Enter the number of sportsmens: ");
                 int num2 = Convert.ToInt32(ReadLine());
                 Sportsmens[] sportsmens = new Sportsmens[num2];
@@ -44,8 +65,14 @@ namespace T15._1
                     Write("Enter weight in kg: ");
                     double weight = Convert.ToDouble(ReadLine());
                     sportsmens[i] = new Sportsmens(name, surname, tall, weight);
+                    WriteLine();
                 }
-                Sportsmens.Output();
+                WriteLine($"Total number: {Sportsmens.Count}\nUnsuitable weight: {Sportsmens.C_w}\n");
+                Write("Information on all: \n");
+                foreach (var sportsmen in sportsmens)
+                {
+                    sportsmen.Output();
+                }
             }
             catch (Exception ex)
             {
